@@ -1,0 +1,10 @@
+1 hambuguer
+2 bolo
+3 poker
+4 japa 
+5 peixe 
+6 raviole
+7 pizza
+8 coxinha
+9 arroz com tucupi
+10 açai
