@@ -1,20 +1,25 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
 
 // EXERCÍCIO 0A
-function soma(num1, num2) {
+/* function soma(num1, num2) {
   // implemente sua lógica aqui
-  return num1 + num2
+  return num1 + num2 
 }
+*/
+
 
 // EXERCÍCIO 0B
-function imprimeMensagem() {
-  // implemente sua lógica aqui
-  
-}
+//function imprimeMensagem() {
+
+ // const mensagem = prompt("digite uma mensagem")
+// console.log(mensagem)
+
+
+
 
 // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
-// EXERCÍCIO 01
+/* EXERCÍCIO 01
 function calculaAreaRetangulo() {
   const altura = prompt("3")
   const largura = prompt("5")
@@ -35,10 +40,23 @@ const idade = Number(anoAtual) - Number(anoDeNascimento)
 console.log(idade)
 }
 
+
+*/ 
+
 // EXERCÍCIO 03
-function calculaIMC(peso, altura) {
+
+
+ /* function calculaIMC(peso, altura) {
+  const resultado = peso / (altura * altura)
+
+  return resultado
 
 }
+
+console.log(resultado(70, 1.65)) 
+
+/* 
+
 
 
 // EXERCÍCIO 04
@@ -49,22 +67,28 @@ let email = prompt ("qual o seu email")
 let fraseUsuario = `Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`
 console.log(fraseUsuario)
 
-return fraseUsuario
-}
+return fraseUsuario */
+
+
 
 // EXERCÍCIO 05
+
+
 function imprimeTresCoresFavoritas() {
-  // implemente sua lógica aqui
- 
-  let cor1 = prompt ("digite uma cor favorita")
-  let cor2 = prompt ("digite outra cor favorita")
-  let cor3 = prompt ("digite outra cor favorita")
-  
-  console.log[cor1, cor2, cor3]
+   
+  const coresFavorita1 = prompt("digite uma cor favorita")
+   const cor2 = prompt("digite outra or favorita")
+   const cor3 = prompt("digite cor favorita")
+ const coresUser = prompt[0]
 
-}
+ return console.log(coresUser)
+} 
 
-// EXERCÍCIO 06
+
+
+
+
+/* EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
 const letraMaiucusla = ("oi")
   return string.toUpperCase() 
@@ -77,10 +101,11 @@ function calculaIngressosEspetaculo(custo, valorIngresso) {
   // implemente sua lógica aqui
 const divisao= (3000 / 100 )
 return divisao
+
+
+
+
 }
-
-
-
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
@@ -101,16 +126,24 @@ return (array[0])
 
 }
 
+*/
+
+/*
 // EXERCÍCIO 10
+
 function retornaUltimoElemento(array) {
-  // implemente sua lógica aqui
   
+  let verificarTamanhoArray = Array.length
+  retornaUltimoElemento = array[array.length -1]
+return retornaUltimoElemento
 
 }
 
-// EXERCÍCIO 11
+
+/* EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
+
 
 }
 
@@ -127,32 +160,6 @@ return string1 !== string2
 
 
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -173,3 +180,5 @@ function checaValidadeInscricaoLabenu() {
   // implemente sua lógica aqui
 
 }
+
+*/
