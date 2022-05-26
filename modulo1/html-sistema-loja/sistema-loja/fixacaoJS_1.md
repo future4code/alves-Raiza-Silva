@@ -6,3 +6,7 @@ function calculaSalario(qtdeCarrosVendidos, valorTotalVendas) {
  
  return totalmes
 }
+
+
+
+  

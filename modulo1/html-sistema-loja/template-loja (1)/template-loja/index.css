@@ -1,0 +1,100 @@
+body{
+    background-image: linear-gradient(to right, white, rgb(246, 159, 174)
+    );
+   
+}
+
+
+h1{
+    color: rgb(245, 42, 96);
+
+}
+
+header{
+    color:  rgb(231, 63, 91);
+   
+   
+}
+
+main{
+    color:  rgb(231, 63, 91);
+}
+
+footer{
+    color: rgb(231, 63, 91);
+}
+
+a{
+   color:  rgb(244, 238, 239);
+}
+
+footer{
+    background-color:rgb(243, 134, 152);
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   bottom: 0%;
+   position: absolute;
+   width: 100%;
+}
+
+.frase{
+    background-color: rgb(246, 246, 246);
+    display:inline-block
+     
+}
+
+.cabeçalho{
+    color: rgb(255, 250, 251);
+    background-color: rgb(231, 63, 91);
+     margin: 0%;
+     font-size: 20px;
+     align-items: flex-end;
+     
+}
+
+.tabela{
+    background-color: rgb(220, 48, 77);
+    color: white;
+    display: inline;
+}
+
+.tabelafuncionarios{
+    background-color: rgb(220, 48, 77) ;
+}
+
+ul{
+    background-color: rgb(220, 48, 77) ;
+    display:inline-table
+}
+
+.presente{
+    color: rgb(255, 247, 248);
+    background-color: rgb(220, 48, 77);
+   display: inline;
+}
+
+.product{
+    color: rgb(255, 247, 248);
+    background-color: rgb(220, 48, 77);
+    display:inline-table
+}
+
+#estoque{
+    color: rgb(255, 247, 248);
+    background-color: rgb(220, 48, 77);
+   
+}
+
+.img{
+    color: rgb(255, 247, 248);
+    
+
+}
+
+.produtos1{
+    color: rgb(255, 247, 248);
+    background-color: rgb(220, 48, 77);
+    display: inline;
+}
