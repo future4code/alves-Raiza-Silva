@@ -11,14 +11,18 @@
 
 h2 {
     background-color: #fe7e02;
-    padding: 10px 5px 10px 5px;
+    padding: 0px 0px 0px 0px;
     color: white;
     text-align: center;
+    font-size: 15px;
+    
+    
 }
 
 input {
-    height: 20px;
-    width: 500px;
+    height: 10px;
+    width: 400px;
+   
 }
 
 button:focus {
@@ -26,7 +30,9 @@ button:focus {
 }
 
 img {
-    width: 100px;
+    width: 60px;
+    position: relative;
+   
 }
 
 div>p:first-child {
@@ -34,7 +40,7 @@ div>p:first-child {
 }
 
 div img {
-    background: black;
+    background: rgba(255, 249, 249, 0.534);
 }
 
 .botao-amarelo {
@@ -58,12 +64,12 @@ div img {
 }
 
 .container {
-    height: 500px;
+    height: 400px;
     text-align: center;
 }
 
 .icone {
-    height: 15px;
+    height: 10px;
 }
 
 
@@ -73,23 +79,32 @@ div img {
   *
   **/
 
+
+  
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+   
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    padding: 100px 0px;
+    font-size: 17px;
+    position: relative;
+    left: auto;
+    top: 100px;
+    list-style-position: inside;
 }
 
 #container-para-comprar {
     background-color: #e7eb90;
+    
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
-    font-size: 60px;
+    font-size: 30px;
 }
 
 
@@ -102,23 +117,31 @@ div img {
 div:nth-child(2),
 div:last-child {
     text-align: center;
+   
 }
 
 table {
-    width: 60%;
+    width: 70%;
+    position: relative;
+    left: 180px;
+    top: 100px;
+    table-layout: auto;
+
 }
 
 td button {
     background-color: #fadf63;
     width: 150px;
-    height: 30px;
+    height: 20px;
     border-radius: 5px;
     color: black;
+    position: relative;
+    left: 170px;
 }
 
 .container-do-search {
-    margin-top: 20px;
-    height: 100px;
+    margin-top: 10px;
+    height: 50px;
 }
 
 
@@ -129,11 +152,33 @@ td button {
     border: 1px solid black;
     border-radius: 5px;
     font-size: 10px;
-    color: black;
+    color: rgb(223, 31, 172);
+  position: absolute;
+  left: 490px;
+  top: 400px;
+   
     
 }
 
 
 #back-button:hover {
     background-color: #635a3d
+}
+
+div > p{
+   position: relative;
+   left:auto;
+   top: 100px;
+   
+
+}
+
+div a>{
+    display: block;
+    margin: auto;
+}
+
+p {
+    font-size: 18px;  
+    overflow-wrap: break-word;
 }
