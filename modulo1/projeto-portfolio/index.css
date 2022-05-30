@@ -1,35 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Poppins:ital,wght@0,100;0,200;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Parisienne&display=swap');
 
+
+
 body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    color: rgb(255, 255, 255);
+    margin: 0%;
+    padding: 0%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0d66b4;
+
 }
 
-
 .header-conteiner{
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
-    background-color: rgb(217, 101, 217) ;
-    background-image: url(./img/raiza.png) ;
+    background-color: rgb(5, 8, 10);
+    background-image: url(./img/Design\ sem\ nome\ \(2\).png);
     background-repeat: no-repeat;
-    background-position:280px;
+    background-position:right 40px;
     background-size: contain;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: flex-start;
-   box-sizing: border-box;
-   padding: 0 113px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
+    box-sizing: border-box;
+    padding: 0 112px;
+    position: relative;
+ 
 
+    
+   
+
+    
+    
+}
+
+h3{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+    color: white;
+  
+    
 }
 
 h1{
-    font-size: 50px;
+    font-size: 25px ;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
 }
 
 h2{
@@ -37,43 +55,128 @@ h2{
     letter-spacing: 5px;
 }
 
-.redes-sociais{
-   margin-top: 1rem;
-   display: flex;
+.redes{
+    display: flex;
+    margin-top: 1rem;
 }
 
-.redes-sociais a{
-    text-decoration: none;
-    color:rgb(255, 255, 255);
-    padding: 1rem 1rem;
-    border: 1px solid;
-    min-width: 0rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .4s ease-in-out;
+.redes a{
+  text-decoration: none;
+  color: aliceblue;
+  padding: 1rem 2rem;
+  border: solid;
+  min-width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+transition: 0.5s ease-in-out;
 }
 
 a:hover{
-    background-color: rgb(218, 183, 236);
+    background-color: rgba(37, 129, 209, 0.228) ;
+  
+}
+
+.conteiner-card{
+    background-color: white;
+    height: 120vh;
+    width: 100vw;
+    
+}
+
+
+.footer{
+    background-color: rgba(11, 17, 83, 0.488);
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    
+}
+
+.sobre{
+    
+    font-size: 20px;
+    height: 60vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: 50px;
+    transition: 0.10s ease-in-out;
+    
+ 
+}
+
+
+.container-projetos{
+    height: 40%;
+    width: 100%;
+   background-image: url(./img/Design\ sem\ nome\ \(3\).png) ;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    opacity: 0.9;
+    display: flex;
+   
+}
+
+.projeto1{
+    height: 30vh;
+    width: center;
+   
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-size: 20px;
+}
+.projeto1 h4{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    position: relative;
+    
+}
+
+.educacao{
+    height: 40vh;
+    width: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 3px;
+}
+
+.edu{
+    font-size: 20px;
+    height: 10vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: 50px;
+    transition: 0.10s ease-in-out;
+}
+
+.edu{
+   text-transform: uppercase;
 }
 
 footer{
-   width: 100%;
-    height: 35px;
-    background-color:rgb(224, 29, 185);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family:sans-serif;
-    font-size: 14px;
-    
-    
+    height: 30px;
+    background-color:  rgba(0, 0, 0, 0.603);
+    color:white;
+    font-size: 17px;
+   text-align: center;
 }
-
-.container{
-    height: 250vh;
-    width: 100vw;
-
-}
-
