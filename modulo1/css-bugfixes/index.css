@@ -1,0 +1,184 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 0px 0px 0px 0px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    
+    
+}
+
+input {
+    height: 10px;
+    width: 400px;
+   
+}
+
+button:focus {
+    color: white;
+}
+
+img {
+    width: 60px;
+    position: relative;
+   
+}
+
+div>p:first-child {
+    display: inline;
+}
+
+div img {
+    background: rgba(255, 249, 249, 0.534);
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 100px;
+    height: 40px;
+    border: none;
+    font-size: 14px;
+    color: white;
+    display:block;
+    margin: auto;
+    margin-bottom: 0%;
+    position: relative;
+    left: auto;
+    top: 160px;
+   
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    height: 400px;
+    text-align: center;
+}
+
+.icone {
+    height: 10px;
+}
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+
+  
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+   
+}
+
+#container-de-descricao>ol {
+    padding: 100px 0px;
+    font-size: 17px;
+    position: relative;
+    left: auto;
+    top: 100px;
+    list-style-position: inside;
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+    
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 30px;
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+   
+}
+
+table {
+    width: 70%;
+    position: relative;
+    left: 180px;
+    top: 100px;
+    table-layout: auto;
+
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+    color: black;
+    position: relative;
+    left: 170px;
+}
+
+.container-do-search {
+    margin-top: 10px;
+    height: 50px;
+}
+
+
+#back-button  {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: rgb(223, 31, 172);
+  position: absolute;
+  left: 490px;
+  top: 400px;
+   
+    
+}
+
+
+#back-button:hover {
+    background-color: #635a3d
+}
+
+div > p{
+   position: relative;
+   left:auto;
+   top: 100px;
+   
+
+}
+
+div a>{
+    display: block;
+    margin: auto;
+}
+
+p {
+    font-size: 18px;  
+    overflow-wrap: break-word;
+}
