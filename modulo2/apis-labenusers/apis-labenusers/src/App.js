@@ -1,8 +1,18 @@
 import React from "react"
 import TelaCadastro from "./components/TelaCadastro";
 import TelaLista from "./components/TelaLista";
+import Hender from "./components/Hender"
+import styled from "styled-components"
 
 
+const Conteiner = styled.div`
+  background: #ffc10787;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+`
 
 export default class App extends React.Component {
    state = {
@@ -32,10 +42,11 @@ irParaLista= ()=>{
   render(){
    
      return (
-      <div>
+      <Conteiner>
+    <Hender/>
     {this.escolheTela()}
     
-      </div>
+      </Conteiner>
     )
   
 }

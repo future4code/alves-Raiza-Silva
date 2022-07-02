@@ -1,6 +1,20 @@
 import React from "react"
 import axios from "axios"
+import styled from "styled-components"
 
+
+
+const Lista= styled.div`
+    display: flex;
+    border: 1px solid orange;
+    padding: 5px;
+    justify-content: center;
+    border: 1px #ffc107 solid;
+    margin: 10px;
+    background: #fdba3fd6;
+    flex-direction: column;
+
+`
  export default class TelaLista extends React.Component {
 
     state={
@@ -46,13 +60,13 @@ import axios from "axios"
         })
      
     return(
-        <div>
+        < Lista>
             <h2>lista usuarios</h2>
              <button onClick={this.props.irParaCadastro}>ir para lista de cadastro</button>
              <input type="text" />
 
              {novaList}
-        </div>
+        </ Lista>
     )
 }
 }
