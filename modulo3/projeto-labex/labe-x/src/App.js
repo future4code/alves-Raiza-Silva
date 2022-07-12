@@ -1,8 +1,7 @@
 import React from "react"
-import HomePage from "./pages/HomePage"
 //import styled from "styled-components"
 import Hender from "./components/Hender"
-
+import {Router} from "./Routes/Router"
 
  
 
@@ -11,11 +10,8 @@ import Hender from "./components/Hender"
 function App() {
   return (
     <div> 
-    
-        < Hender/>
-        <HomePage/>
-
-   
+       < Hender/>
+       < Router/>
     </div>
     
   )
