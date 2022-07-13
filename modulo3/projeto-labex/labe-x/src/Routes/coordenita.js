@@ -4,7 +4,7 @@
     navigate("/listTrip")
   }
   export const goTologin = (navigate)=>{
-    navigate("/loginPage")
+  navigate("/loginPage")
   }
 
   export const goBack = (navigate)=>{
@@ -17,4 +17,8 @@
 
   export const goToCreateTripPage =(navigate)=>{
     navigate("/createTrip")
+   }
+
+   export const goToDatailsTrip =(navigate,id)=>{
+    navigate(`/tripDetails/${id}`)
    }

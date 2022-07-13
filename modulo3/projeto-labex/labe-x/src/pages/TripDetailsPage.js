@@ -1,15 +1,35 @@
-import React from 'react'
+//import axios from "axios";
+import axios from "axios";
+import { useEffect } from "react";
+import {  useParams } from "react-router-dom";
 
-function TripDetailsPage() {
-  return (
-    <div>
-        
-            <div>
-            <h3>Para o administrador ver o detalhe de uma viagem específica, bem como os candidatos que aplicaram para ela</h3>
-            
-           </div>
-    </div>
-  )
-}
+
+
+
+  const TripDetailsPage = () => {
+  const params = useParams()
+   
+    const token = localStorage.getItem("token");
+    useEffect(()=>{
+      axios.
+          get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/raiza-gomes-alves/trip/"${params.id}`, //colocar id=
+          {
+            headers: {
+              auth: token
+            }
+          }
+         )
+         .then((response) => {
+          console.log(response.data.trip);
+        })
+
+        .catch((error) => {
+          console.log("Deu erro: ", error.response);
+        });
+    },[])
+    
+    return <div>Detalhes da viagem</div>;
+};
+
 
 export default TripDetailsPage

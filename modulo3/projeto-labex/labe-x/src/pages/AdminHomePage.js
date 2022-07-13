@@ -1,10 +1,26 @@
 import React from 'react'
 import {useNavigate} from "react-router-dom"
-import {goBack, goToCreateTripPage} from "../Routes/coordenita"
+import {goBack, goToCreateTripPage,} from "../Routes/coordenita"
+import { useEffect } from "react";
+
+const useProtectedPage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (token === null) {
+      console.log("Não está logado");
+      navigate.push("/login");
+    }
+  }, []);
+};
+
 
 function AdminHomePage() {
- const navigate = useNavigate()
- 
+  const navigate = useNavigate();
+
+ useProtectedPage();
 
 
   return (
