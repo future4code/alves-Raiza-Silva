@@ -8,6 +8,7 @@ export const ConjuntoHome = styled.div`
   display: flex;
     justify-content: center;
     align-items: center;
+   
 
 `
 export const Botao = styled.button`
@@ -15,8 +16,12 @@ export const Botao = styled.button`
  flex-direction: column;
  margin: 20px;
  padding: 10px;
+ 
 
+ 
 `
+
+
 function HomePage() {
    const navigate = useNavigate()
   
@@ -25,10 +30,10 @@ function HomePage() {
 
   return (
     <ConjuntoHome>
-      <img src={imagemHome} alt={"logo alien"} width="500px" />
+     <figure><img src={imagemHome} alt={"logo alien"} width="380px" /></figure> 
 
       <div>
-        <Botao onClick={()=>goToListTripsPage(navigate)}>ir para viagens</Botao>
+        <Botao onClick={()=>goToListTripsPage(navigate)}> <span>ir para viagens</span></Botao>
         <Botao onClick={()=>goTologin(navigate)}>fazer login adm</Botao>
       </div>
 

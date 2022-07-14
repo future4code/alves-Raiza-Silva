@@ -1,6 +1,6 @@
-//import axios from "axios";
+
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import {  useParams } from "react-router-dom";
 
 
@@ -8,7 +8,9 @@ import {  useParams } from "react-router-dom";
 
   const TripDetailsPage = () => {
   const params = useParams()
-   
+  const [id, setId] = useState("")
+
+
     const token = localStorage.getItem("token");
     useEffect(()=>{
       axios.
@@ -20,7 +22,7 @@ import {  useParams } from "react-router-dom";
           }
          )
          .then((response) => {
-          console.log(response.data.trip);
+          setId(response.data.trip)
         })
 
         .catch((error) => {
@@ -28,7 +30,18 @@ import {  useParams } from "react-router-dom";
         });
     },[])
     
-    return <div>Detalhes da viagem</div>;
+    return <div>
+      <h1>Detalhes da viagem</h1>
+     <div>
+           <p>Titulo: </p>{id.name}<p />
+          <p>Descrição: </p>{id.description}<p/>
+          <p>Planeta: </p>{id.planet}<pr />
+          <p>Duração de: </p>{id.durationInDays} Dias<p />
+          <p>Data: </p>{id.date}
+     </div>
+
+
+    </div>;
 };
 
 

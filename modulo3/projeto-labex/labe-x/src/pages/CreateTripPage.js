@@ -45,9 +45,19 @@ function CreateTripPage() {
         title="o nome da viagem deve ter mais de 5 caracters"
         
         />
-        <select>
-          <option></option>
-        </select>
+       
+      <select onChange={onChangePlanet}>
+        <option value={"mercury"}>Mercúrio</option>
+        <option value={"venus"}>Vênus</option>
+        <option value={"earth"}>Terra</option>
+        <option value={"mars"}>Marte</option>
+        <option value={"jupiter"}>Júpiter</option>
+        <option value={"saturn"}>Saturno</option>
+        <option value={"uranos"}>Urano</option>
+        <option value={"neptune"}>Natuno</option>
+        <option value={"pluto"}>Plutão</option>
+      </select>
+       
         <input 
          placeholder="Data" 
          type="date"
