@@ -1,38 +1,55 @@
 import React from 'react'
-import {useNavigate} from "react-router-dom"
-import {goBack, goToCreateTripPage,} from "../Routes/coordenita"
-import { useEffect } from "react";
+import {useNavigate,useParams } from "react-router-dom"
+import { goTologin, goToCreateTripPage,} from "../Routes/coordenita"
+import { useEffect,useState } from "react";
+import axios from 'axios';
+import { ConjuntoTripsAdm,ConjuntoAdm, BotaoAdm, BotaoA } from "../styledPages/styled"
 
-const useProtectedPage = () => {
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (token === null) {
-      console.log("Não está logado");
-      navigate.push("/login");
-    }
-  }, []);
-};
 
 
 function AdminHomePage() {
-  const navigate = useNavigate();
+  const [trips, setTripsList] = useState([])
+  let navigate = useNavigate()
+  const params = useParams()
+  
+  const getTrips = () => {
+    axios
+      .get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/raiza-gomes-alves/trips')
+      .then(res => {
+        console.log(res)
+        setTripsList(res.data.trips)
+      })
+  }
 
- useProtectedPage();
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+    } else {
+      navigate('/login')
+    }
+    getTrips()
+  }, [])
+  
+  const renderTrips = trips.map((item) => {
+    return <ConjuntoTripsAdm key={item.id}>{item.name}</ConjuntoTripsAdm>
+  })
 
+  
 
   return (
     <div>
 
-      <div>
+      <ConjuntoAdm>
         <h3> Para o administrador ver a lista de viagens e poder deletá-las ou acessar o detalhe de cada uma delas</h3>
-        <button onClick={()=>goBack(navigate)}>voltar</button>
-        <button onClick={()=>goToCreateTripPage(navigate)}>Criar Viagem</button>
-        <button onClick={()=>(navigate)}>Loungt</button>
+       < BotaoA>
+        < BotaoAdm onClick={()=> goTologin(navigate)}>voltar</ BotaoAdm>
+        < BotaoAdm onClick={()=>goToCreateTripPage(navigate)}>Criar Viagem</ BotaoAdm>
+        < BotaoAdm onClick={()=>(navigate)}>Loungt</ BotaoAdm>
+       </ BotaoA>
         
-      </div>
+        <p>{renderTrips}</p>
+       
+      </ConjuntoAdm>
     </div>
   )
 }

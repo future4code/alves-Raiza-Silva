@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { goBack } from "../Routes/coordenita"
 import { useNavigate } from "react-router-dom"
-
+import { axios } from 'axios'
+import {ConjuntoForm,InputsFormulario,InputsSelect,BotaoAdm,ConjuntoFormAdm} from "../styledPages/styled"
 
   
 
@@ -33,12 +34,30 @@ function CreateTripPage() {
   const onChangedurationInDays =(e)=>{
     setDurationInDays(e.target.value)
   }
+
+  const CreateTrip =()=>{
+    const body ={
+      name:name,
+      planet: planet,
+      date: date,
+      description: description,
+      durationInDays: durationInDays
+    }
+       axios.
+          post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/raiza-gomes-alves/trips",
+          body).then((res) => {
+            console.log("deu certo" ,res.data)
+          })
+            
+  }  
+
+
  
   return (
-    <div>
+    <ConjuntoFormAdm>
       <h1> Formulário para o administrador criar uma nova viagem </h1>
-      <form>
-        <input type="name"
+      <ConjuntoForm >
+        <InputsFormulario type="name"
         placeholder='nome'
         value={name}
         onChange={onChangeName}
@@ -46,7 +65,7 @@ function CreateTripPage() {
         
         />
        
-      <select onChange={onChangePlanet}>
+      <InputsSelect onChange={onChangePlanet}>
         <option value={"mercury"}>Mercúrio</option>
         <option value={"venus"}>Vênus</option>
         <option value={"earth"}>Terra</option>
@@ -56,40 +75,40 @@ function CreateTripPage() {
         <option value={"uranos"}>Urano</option>
         <option value={"neptune"}>Natuno</option>
         <option value={"pluto"}>Plutão</option>
-      </select>
+      </InputsSelect>
        
-        <input 
+        <InputsFormulario 
          placeholder="Data" 
          type="date"
          name="date" 
          required=""
          min="2022-07-12" 
-         value={date}>
+         value={date}
          onChange={onChangeDate} 
-         </input>
+         />
 
-         <input placeholder="Descrição"
+         <InputsFormulario placeholder="Descrição"
           name="description" required="" 
           pattern="^.{30,}$" 
           title="O nome deve ter no mínimo 30 caracteres"
-          value={description}>
+          value={description}
           onChange={onChangedescription}
-          </input>
-          <input
+          />
+          <InputsFormulario
           placeholder="Duração em dias" 
           type="number" 
           name="durationInDays"
           required=""
           min="50" 
-          value={durationInDays}>
+          value={durationInDays}
           onChange={onChangedurationInDays}
-           </input>
-      </form>
+          />
+      </ConjuntoForm >
       
       
-      <button onClick={() => goBack(navigate)}>voltar</button>
-      <button>Criar</button>
-    </div>
+      <BotaoAdm  onClick={() => goBack(navigate)}>voltar</BotaoAdm >
+      <BotaoAdm   onClick={CreateTrip}>Criar</BotaoAdm >
+    </ConjuntoFormAdm>
   )
 }
 

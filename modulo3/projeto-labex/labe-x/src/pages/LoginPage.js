@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import { goBack } from "../Routes/coordenita"
+import { goToHomePage, goToAdmHomePage } from "../Routes/coordenita"
 import { useNavigate, } from "react-router-dom"
 import axios from "axios"
+import {  MainConjunto,FormLogin,Inputs,Botao2,H1, ConjuntoBotoes } from "../styledPages/styled"
 
 
 
-  function LoginPage() {
+function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  
+
 
   const onChangeEmail = (event) => {
     setEmail(event.target.value)
@@ -20,52 +21,60 @@ import axios from "axios"
 
   const navigate = useNavigate()
 
-        const goSubmitLogin=()=>{
-                     const body = {
-                        email:email,
-	                         password:password
-                      }
-                       axios.
-                          post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/raiza-gomes-alves/login",
-                           body
-                           ).then((response) => {
-              
-                            localStorage.setItem("token", response.data.token);
-                            navigate.push("/tripDetails");
-                          
-                           })
-                           .catch((error) => {
-                            console.log("ERRO: ", error.response);
-                          });
-                        }
+  const goSubmitLogin = (event) => {
+    event.preventDefault()
+    const body = {
+      email: email,
+      password: password
+    }
+    axios.
+      post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/raiza-gomes-alves/login",
+        body
+      ).then((res) => {
+        console.log("Deu Certo", res.data)
+        localStorage.setItem('token', res.data.token)
+        goToAdmHomePage(navigate)
 
-       
-        return (
-        
-        <div>
-
-             <main>
-                  <h1>login como administrador</h1>
-                     <div>
-                           <input
-                                  placeholder="email"
-                                  type="email"
-                                  value={email}
-                                  onChange={onChangeEmail} />
-                           <input
-                                  placeholder="password"
-                                  type="password"
-                                  value={password}
-                                  onChange={onChangePassword} />
-                      </div>
-
-                       <div>
-                           <button onClick={() => goBack(navigate)}>voltar</button>
-                           <button onClick={goSubmitLogin} >enviar</button>
-                       </div>
+      })
+      .catch((error) => {
+        console.log("ERRO: ", error.response);
+      });
+  }
 
 
-              </main>
+  return (
+
+    <div>
+
+      <MainConjunto>
+        <H1 >login como administrador</H1 >
+        <FormLogin onSubmit={goSubmitLogin}>
+          <Inputs
+            placeholder="email"
+            type="email"
+            value={email}
+            onChange={onChangeEmail}
+            required />
+          <Inputs
+            placeholder="password"
+            type="password"
+            value={password}
+            onChange={onChangePassword}
+            required />
+
+         
+          <ConjuntoBotoes>
+            <Botao2 >login</Botao2>
+            <Botao2 onClick={() => goToHomePage(navigate)}>voltar</Botao2>
+            
+          </ConjuntoBotoes>
+
+        </FormLogin>
+
+
+
+
+      </MainConjunto>
     </div>
   )
 }

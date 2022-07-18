@@ -2,6 +2,10 @@ import React, {useState,useEffect}from 'react'
 import { useNavigate } from "react-router-dom"
 import { goBack } from "../Routes/coordenita"
 import axios from "axios"
+import { Inputs,ConjuntoFormAdm,ConjuntoForm, InputsSelect,BotaoAdm } from "../styledPages/styled"
+
+
+
 
 function ApplicationFormPage() {
   const navigate = useNavigate()
@@ -46,29 +50,29 @@ function ApplicationFormPage() {
     }
 
   return (
-    <div>
+    <ConjuntoFormAdm>
       <h1>Página do formulário de inscriçãoe</h1>
-      <form>
-        <select>
+      <ConjuntoForm>
+        < InputsSelect>
         {tripsRender}
-        </select>
-        <input
+        </ InputsSelect>
+        < Inputs
           onChange={onChangeName}
           placeholder="Nome"
           name="name" pattern="^.{3,}$"
           title="O nome deve ter no mínimo 3 caracteres"
-          required=""
+          required
           value={name}>
-        </input>
-        <input 
+        </ Inputs>
+        < Inputs 
           placeholder="Idade"
           type="number"
           name="age"
-          required="" min="18"
+          required="obrigatorio" min="18"
           value={age}
           onChange={onChangeAge}>
-        </input>
-        <input 
+        </ Inputs>
+        < Inputs
           placeholder="Texto de Candidatura"
           name="applicationText" 
           required=""
@@ -77,8 +81,8 @@ function ApplicationFormPage() {
           value={applicationText}
           onChange={onChangeApplicationText}>
 
-        </input>
-        <input 
+        </ Inputs>
+        < Inputs
           placeholder="Profissão"
           name="profession" 
           required=""
@@ -87,8 +91,8 @@ function ApplicationFormPage() {
           value={profession}
           onChange={onChangeProfession}>
 
-        </input>
-        <select value={country} onChange={onChangeCountry}>
+        </ Inputs>
+        < InputsSelect value={country} onChange={onChangeCountry}>
           <option value="" disabled selected>Selecione seu país</option>
           <option value='Argentina'>Argentina</option>
           <option value='Bolívia'>Bolívia</option>
@@ -102,20 +106,22 @@ function ApplicationFormPage() {
           <option value='Suriname'>Suriname</option>
           <option value='Uruguai'>Uruguai</option>
           <option value='Venezuela'>Venezuela</option>
-        </select>
+        </ InputsSelect>
+
+
+        
+        <BotaoAdm>Enviar</BotaoAdm>
+        <BotaoAdm onClick={() => goBack(navigate)}>Voltar</BotaoAdm>
+
+      </ConjuntoForm>
 
 
 
 
-      </form>
 
-
-
-
-
-      <button onClick={() => goBack(navigate)}>Voltar</button>
-      <button>Enviar</button>
-    </div>
+      
+     
+    </ConjuntoFormAdm>
   )
 }
 

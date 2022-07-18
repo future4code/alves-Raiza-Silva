@@ -2,36 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import { goBack, goApplicationFormPage } from "../Routes/coordenita"
 import axios from "axios"
-import styled from "styled-components"
+import {ConjuntoTrips, ConjuntoConteiner,BotaoTrips } from "../styledPages/styled"
 
 
-const ConjuntoTrips = styled.div`
-    border: 1px solid green;
-    padding: 10px;
-    background: darkseagreen;
-    color: white;
-    font-family: monospace;
-    margin: 20px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 10px 10px #00000096;
-    width: 50%;
 
-`
-const ConjuntoConteiner =styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-`
-const BotaoTrips =styled.button`
-    border: none;
-    display: flex;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 15px;
-
-`
 
 function ListTripsPage() {
   const navigate = useNavigate()
