@@ -1,14 +1,14 @@
 
-export const goToLogin = (navegite) =>{
-    navigate('/login')
+export const goToLogin = (navigate) =>{
+    navigate.push('/login')
 }
 
-export const goTofeed = (navegite) =>{
-    navigate('/feed')
+export const goTofeed = (navigate) =>{
+    navigate.push('/feed')
 }
-export const goToPost = (navegite) =>{
-    navigate('/post')
+export const goToPost = (navigate) =>{
+    navigate.push('/')
 }
-export const goTocadastro = (navegite) =>{
+export const goTocadastro = (navigate) =>{
     navigate('/cadastro')
 }
