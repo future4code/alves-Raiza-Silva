@@ -1,11 +1,14 @@
 import React from 'react'
 import { useForm } from '../../hooks/useForm'
-import { goToPostPage,goToCadastroPage } from '../../routes/cordination' 
+import {  goToFeedPage,goToCadastroPage } from '../../routes/cordination' 
 import { useNavigate} from 'react-router-dom'
 import { BASE_URL } from '../../contants/urls'
 import axios from 'axios'
-
-
+import { ScreenConteiner,InputConteiner, LogoImg ,ConjuntoCadastro} from '../../components/styled'
+import logo from "../../assets/Logo.svg"
+import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
+//import { colorPrimary } from '../../contants/coloors'
 
 const LoginPage = () => {
  
@@ -23,7 +26,7 @@ const LoginPage = () => {
     axios.post(`${BASE_URL}/users/login`, body)
         .then((response) => {
             localStorage.setItem('token', response.data.token)
-            goToPostPage(navigate)
+             goToFeedPage(navigate)
             clean()
         }).catch((error) => {
             alert("Usuário ou senha inválidos")
@@ -34,39 +37,56 @@ const LoginPage = () => {
 
 
   return (
-    <>
-      
-      <div>
-        <p>rede social labenu</p>
-      </div>
+    <ScreenConteiner>
+       <LogoImg src={logo}/>
+
       <form onSubmit={onSubmitForm}>
-        <div>
-          <input
-            name="email"
-            type="email"
-            onChange={onChange}
-            value={form.email}
-            placeholder="E-mail *"
-            required
+        <InputConteiner>
+          <TextField
+          
+          name="email"
+          type="email"
+          onChange={onChange}
+          value={form.email}
+          placeholder="E-mail *"
+          required
+          variant={"outlined"}
+          fullWidth
+          margin={'normal'}
           />
-          <input
-            name="password"
-            type="password"
-            onChange={onChange}
-            value={form.password}
-            placeholder="Senha *"
-            required
+          <TextField
+          name="password"
+          type="password"
+          onChange={onChange}
+          value={form.password}
+          placeholder="Senha *"
+          required
+          variant={"outlined"}
+          fullWidth
           />
-        </div>
-        <div>
-          <button type="submit">Continuar</button>
-        </div>
+          
+        </InputConteiner>
+        <InputConteiner>
+          <Button 
+          fullWidth
+          variant={"contained"}
+          color={"primary"}
+          type="submit">Continuar</Button>
+        </InputConteiner>
+        
       </form>
       
-      <>
-        <button onClick={() => goToCadastroPage(navigate)}>Crie uma conta!</button>
-      </>
-    </>
+      <ConjuntoCadastro>
+        <Button 
+        type={"submit"}
+        variant={"Text"}
+        fullWidth
+        color={"primary"}
+        onClick={() => goToCadastroPage(navigate)}>Crie uma conta!</Button>
+      </ConjuntoCadastro>
+    
+
+    </ScreenConteiner>
   )
 }
 

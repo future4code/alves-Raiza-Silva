@@ -202,3 +202,204 @@ export const ConjuntoFormAdm= styled.div`
     flex-direction: column;
     align-items: center;
 `
+
+export const RecipeList = styled.div`
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+margin:30px;
+
+
+`
+
+export const AddRecipeButton = styled.button`
+position: fixed !important;
+right:20px;
+bottom: 20px;
+z-index:3;
+
+`
+export const ScreenConteiner = styled.div`
+display: flex;
+flex-direction:column;
+align-items:center;
+width:100vw;
+`
+
+export const InputConteiner = styled.div`
+display: flex;
+flex-direction:column;
+width:80vw;
+max-width: 450px;
+align-items: center;
+margin-bottom: 20px;
+`
+
+export const LogoImg = styled.img`
+ width: 70vw;
+ max-width: 200px;
+ margin: 10px;
+`
+
+export const ConjuntoCadastro = styled.div`
+ width: 80vw;
+ max-width: 450px;
+`
+
+export const InputTitle = styled.input`
+position: absolute;
+width: 364px;
+height: 53px;
+left: 30px;
+top: 122px;
+
+background: #EDEDED;
+border-radius: 12px;
+`
+export const InputPost = styled.input`
+position: absolute;
+width: 364px;
+height: 131px;
+left: 30px;
+top: 187px;
+
+background: #EDEDED;
+border-radius: 12px;
+
+`
+
+export const ConjuntoD = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 9px 10px;
+gap: 18px;
+
+width: 364px;
+height: 167px;
+
+background: #FBFBFB;
+border: 1px solid #E0E0E0;
+border-radius: 12px;`
+
+
+export const ConjuntoP = styled.div`
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 9px 10px;
+gap: 18px;
+
+position: absolute;
+width: 364px;
+height: 258.89px;
+left: 31px;
+top: 743px;
+
+background: #FBFBFB;
+border: 1px solid #E0E0E0;
+border-radius: 12px;`
+
+
+export const Buttonp = styled.button`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 145px;
+
+position: absolute;
+width: 359px;
+height: 47px;
+left: 33px;
+top: 330px;
+
+background: linear-gradient(90deg, #FF6489 0%, #F9B24E 100%), #4088CB;
+border-radius: 12px;
+`
+
+export const CardPost = styled.div`
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 9px 10px;
+gap: 18px;
+width: 364px;
+height: 167px;
+background: #fbfbfb;
+border: 1px solid #e0e0e0;
+border-radius: 12px;
+flex: none;
+order: 0;
+flex-grow: 0;
+position: relative;
+div {
+  cursor: pointer;
+}
+`;
+
+export const MainContainer = styled.div`
+  position: relative;
+  width: 428px;
+  height: 1134px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+`;
+
+export const ContainerCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  position: absolute;
+  width: 364px;
+  max-height: 629px;
+  left: 32px;
+  top: 427px;
+`;
+
+export const ButtonPost = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 145px;
+  position: absolute;
+  width: 359px;
+  height: 47px;
+  left: 33px;
+  top: 330px;
+  background: linear-gradient(90deg, #ff6489 0%, #f9b24e 100%), #4088cb;
+  border-radius: 12px;
+`;
+
+export const InputPoste = styled.input`
+  position: absolute;
+  width: 364px;
+  height: 131px;
+  left: 30px;
+  top: 187px;
+  background: #ededed;
+  border-radius: 12px;
+`;
+
+export const Form = styled.form`
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
+export const Title = styled.input`
+  position: absolute;
+  width: 364px;
+  height: 53px;
+  left: 30px;
+  top: 122px;
+  background: #ededed;
+  border-radius: 12px;
+`;
