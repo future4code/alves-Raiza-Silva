@@ -1,0 +1,20 @@
+{
+  "name": "aula-type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node build/index.js",
+    "start-exer1": "tsc && node build/exercicio1.js",
+    "start-exer2": "tsc && node build/exercicio2.js",
+    "start-exer3": "tsc && node build/exercicio3.js",
+    "start-exer4": "tsc && node build/exercicio4.js",
+    "start-exer5": "tsc && node build/exercicio5.js"
+  },
+  "keywords": [],
+  "author": "Raiza gomes",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}
