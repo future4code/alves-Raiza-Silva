@@ -1,24 +1,37 @@
 console.log("teste 3333")
-const nomeFilme : string = "helly poter"
-const anoFilme :number= 2023
+
 enum tipoFilme {
-	ACAO="ação",
-	DRAMA="drama",
-	COMEDIA="comédia",
-	ROMANCE="romance",
-	TERROR="terror"
+    ACAO = "ação",
+    DRAMA = "drama",
+    COMEDIA = "comédia",
+    ROMANCE = "romance",
+    TERROR = "terror"
 }
 
-const notaFilme = 6.7
-const exerc3 = (nomeFilme: string, anoFilme: Number, tipoFilme:string, notaFilme?: number)=>{
-    const teste = ()=>{
-        if(notaFilme){
-            return`nome:${nomeFilme}, ${anoFilme},${tipoFilme}, pontuação ${nomeFilme}`
-        }else{
-            return`nome${nomeFilme}, ${anoFilme},${tipoFilme}`
-           
-        }
-    } 
-    
+type filme = {
+    titulo: string,
+    genero: tipoFilme,
+    ano: number,
+    pontuaçao?: number
 }
-console.log(exerc3("helly poter", 2023, tipoFilme.COMEDIA, 6))
+
+const exerc3 = (titulo: string, ano: number, genero: tipoFilme, pontuaçao?: number): filme => {
+    if (pontuaçao) {
+        return {
+            titulo,
+            ano,
+            pontuaçao,
+            genero
+        }
+    }
+    else {
+        return {
+            titulo,
+            ano,
+            genero
+        }
+
+    }
+
+}
+console.log(exerc3("scoob-dow", 2023, tipoFilme.COMEDIA, 6))
