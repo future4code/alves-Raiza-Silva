@@ -9,8 +9,6 @@ export const HeaderStyled = styled.div`
 
 `
 
-
-
 function Hender() {
   return (
     <HeaderStyled>LABE-X</HeaderStyled>

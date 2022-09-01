@@ -9,9 +9,6 @@ import { goToListTripsPage, goTologin } from "../Routes/coordenita"
 function HomePage() {
   const navigate = useNavigate()
 
-
-
-
   return (
     <ConjuntoHome>
       <figure><img src={imagemHome} alt={"logo alien"} width="550px" /></figure>

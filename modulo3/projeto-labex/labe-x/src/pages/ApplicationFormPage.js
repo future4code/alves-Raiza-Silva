@@ -2,7 +2,7 @@ import React, {useState,useEffect}from 'react'
 import { useNavigate } from "react-router-dom"
 import { goBack } from "../Routes/coordenita"
 import axios from "axios"
-import { Inputs,ConjuntoFormAdm,ConjuntoForm, InputsSelect,BotaoAdm } from "../styledPages/styled"
+//import { Inputs,ConjuntoFormAdm,ConjuntoForm, InputsSelect,BotaoAdm } from "../styledPages/styled"
 
 
 
