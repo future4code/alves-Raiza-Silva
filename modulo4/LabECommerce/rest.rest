@@ -1,0 +1,10 @@
+
+
+POST http://localhost:3003/user
+Content-Type: application/json
+
+{
+    "name": "jo",
+    "email": "jo@gmial.com",
+    "password": "d23333"
+}

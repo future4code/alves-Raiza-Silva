@@ -1,0 +1,23 @@
+
+
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "email": "raiza@gmail.com",
+    "password": "raiza1233"
+}
+
+###
+
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+    "email": "raiza@gmail.com",
+    "password": "raiza1233"
+}
+
+###
+
+GET http://localhost:3003/user/profile
