@@ -1,5 +1,4 @@
 import app from "./app"
-import singup from "./endpoints/singUp"
 import login from "./endpoints/login"
 import profile from "./endpoints/profile"
 import signup from "./endpoints/singUp"
