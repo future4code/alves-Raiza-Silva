@@ -1,0 +1,19 @@
+{
+  "name": "templateAPIsREST",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node build/index.js",
+    "start-exer1": "tsc && node build/Exercício1.js",
+    "start-exer2": "tsc && node build/Exercício2.js",
+    "start-exer3": "tsc && node build/Exercício3.js",
+    "start-exer4": "tsc && node build/Exercício4.js"
+  },
+  "keywords": [],
+  "author": "Raiza gomes",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}
