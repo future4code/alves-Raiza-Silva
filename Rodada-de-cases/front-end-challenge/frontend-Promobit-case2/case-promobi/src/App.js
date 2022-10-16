@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header';
 import PageFilter from './pages/PageFilter/PageFilter';
+import PageHome from './pages/PageHome/PageHome';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div> 
       <Header/>
       <PageFilter/>
+      <PageHome/>
     </div> 
   );
 }
