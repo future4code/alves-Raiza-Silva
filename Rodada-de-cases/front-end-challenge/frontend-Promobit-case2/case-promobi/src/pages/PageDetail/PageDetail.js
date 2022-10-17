@@ -1,11 +1,9 @@
 import React from "react"
 
-export default class PageDetail extends React.Component {
-
-    render() {
+export default function PageDetail(){
 
         return <div>
             <h1>pagina de detalhes </h1>
         </div>
-    }
+    
 }

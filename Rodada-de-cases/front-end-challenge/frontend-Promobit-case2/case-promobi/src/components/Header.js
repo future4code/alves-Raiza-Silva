@@ -23,12 +23,10 @@ export const ConteinerHeader = styled.div`
 `
 
 
-export default class Header extends React.Component {
-
-    render() {
+export default function Header(){
 
         return <ConteinerHeader>
-            <LogoHeader src={logo}/>
-        </ConteinerHeader>
-    }
+                  <LogoHeader src={logo}/>
+              </ConteinerHeader>
+    
 }

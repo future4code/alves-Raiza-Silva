@@ -3,11 +3,14 @@ import styled from "styled-components"
 
 export const Conteinerfilter = styled.div`
  position: absolute;
- width: 1440px;
- height: 449px;
- left: 0px;
- top: 56px;
- background: #2D0C5E;
+width: 1440px;
+height: 449px;
+left: 0px;
+top: 56px;
+
+background: #2D0C5E;
+
+
 `
 export const TextH1 = styled.h1`
  position: absolute;
@@ -26,13 +29,14 @@ export const TextH1 = styled.h1`
  color: #FFFFFF;
 `
 
-export default class PageFilter extends React.Component {
+export default function PageFilter(){
 
-
-    render() {
-
-        return <Conteinerfilter>
+    
+    return <Conteinerfilter>
+           <div>
             <TextH1> Milhões de filmes, séries e pessoas para descobrir. Explore já.</TextH1>
+           </div>
+           
         </Conteinerfilter>
-    }
+    
 }
