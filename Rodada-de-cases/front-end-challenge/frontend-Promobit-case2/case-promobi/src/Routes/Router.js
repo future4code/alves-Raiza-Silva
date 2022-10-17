@@ -11,6 +11,7 @@ export const Router = ()=> {
         <Routes>
           <Route index element={<PageHome />} />
           <Route path="detail" element={<PageDetail />} />
+          <Route path="busca" element={<PageDeBusca />} />
           
         </Routes>
       </BrowserRouter>

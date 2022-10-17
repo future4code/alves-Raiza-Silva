@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import FiltroDeBusca from "../../components/FiltroDeBuscar"
 
 export const Conteinerfilter = styled.div`
  position: absolute;
@@ -35,6 +36,7 @@ export default function PageFilter(){
     return <Conteinerfilter>
            <div>
             <TextH1> Milhões de filmes, séries e pessoas para descobrir. Explore já.</TextH1>
+            <FiltroDeBusca/>
            </div>
            
         </Conteinerfilter>
